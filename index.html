@@ -1,62 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ME Portfolio</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    #riveCanvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: transparent !important;
+    }
   </style>
 </head>
 <body>
-<p class="p1"><b>&lt;!DOCTYPE html&gt;</b></p>
-<p class="p1"><b>&lt;html lang="en"&gt;</b></p>
-<p class="p1"><b>&lt;head&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;title&gt;ME Portfolio&lt;/title&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;style&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>html, body {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>padding: 0;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>width: 100%;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>height: 100%;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>background: transparent;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>overflow: hidden;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>#riveCanvas {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>display: block;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>width: 100%;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>height: 100%;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>background: transparent !important;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;/style&gt;</b></p>
-<p class="p1"><b>&lt;/head&gt;</b></p>
-<p class="p1"><b>&lt;body&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;canvas id="riveCanvas"&gt;&lt;/canvas&gt;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;!-- Rive JS Runtime --&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;script src="https://unpkg.com/@rive-app/canvas@2.9.1/rive.js"&gt;&lt;/script&gt;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;script&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>const rive = new Rive({</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>src: "ME.riv",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>canvas: document.getElementById("riveCanvas"),</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>autoplay: true,</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>context: 'webgl', // Alpha transparency support</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>onLoad: () =&gt; {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>console.log("Rive loaded!");</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>},</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>onError: (e) =&gt; {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>console.error("Rive error:", e);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>});</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;/script&gt;</b></p>
-<p class="p1"><b>&lt;/body&gt;</b></p>
-<p class="p1"><b>&lt;/html&gt;</b></p>
+  <canvas id="riveCanvas"></canvas>
+
+  <!-- Rive JS Runtime -->
+  <script src="https://unpkg.com/@rive-app/canvas@2.9.1/rive.js"></script>
+
+  <script type="text/javascript">
+    const rive = new Rive({
+      src: "ME.riv", // Hoặc ghi rõ đường dẫn tuyệt đối nếu cần
+      canvas: document.getElementById("riveCanvas"),
+      autoplay: true,
+      context: "webgl", // Giúp background trong suốt
+      onLoad: () => {
+        console.log("Rive loaded!");
+      },
+      onError: (e) => {
+        console.error("Rive error:", e);
+      }
+    });
+  </script>
 </body>
 </html>
